@@ -15,7 +15,7 @@ const cardKanbanSchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    enum: ["To do", "Doing", "Ready"], // Define os valores permitidos para o status
+    enum: ["To do", "Doing", "Ready"],
     default: "To do",
   },
   createdAt: {
@@ -24,7 +24,7 @@ const cardKanbanSchema = new mongoose.Schema({
   },
   concludedAt: {
     type: Date,
-    default: null, // Por padrão, a data de conclusão é nula
+    default: null,
   },
 });
 

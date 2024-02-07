@@ -1,4 +1,3 @@
-// controllers/taskController.js
 const cardKanbanModel = require("../models/cardKanbanModel");
 
 async function getAllCards(req, res) {
