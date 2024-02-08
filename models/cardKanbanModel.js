@@ -9,10 +9,6 @@ const cardKanbanSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  difficult: {
-    type: String,
-    required: true,
-  },
   status: {
     type: String,
     enum: ["To do", "Doing", "Ready"],
