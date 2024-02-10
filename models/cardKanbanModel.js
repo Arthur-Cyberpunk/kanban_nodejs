@@ -5,14 +5,14 @@ const cardKanbanSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  description: {
+  difficult: {
     type: String,
     required: true,
   },
   status: {
     type: String,
-    enum: ["To do", "Doing", "Ready"],
-    default: "To do",
+    enum: ["Todo", "Doing", "Ready"],
+    default: "Todo",
   },
   createdAt: {
     type: Date,

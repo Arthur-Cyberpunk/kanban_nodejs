@@ -31,19 +31,6 @@ async function updateCard(req, res) {
   }
 }
 
-async function moveCard(req, res) {
-  try {
-    const moveCard = await cardKanbanModel.findByIdAndUpdate(
-      req.params.id,
-      { column: req.body.column },
-      { new: true },
-    );
-    res.status(200).json(moveCard);
-  } catch (error) {
-    res.status(500).json({ message: "Erro ao mover tarefa." });
-  }
-}
-
 async function deleteCard(req, res) {
   try {
     await cardKanbanModel.findByIdAndDelete(req.params.id);
@@ -57,6 +44,5 @@ module.exports = {
   getAllCards,
   createCard,
   updateCard,
-  moveCard,
   deleteCard,
 };
